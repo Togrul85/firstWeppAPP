@@ -1,0 +1,53 @@
+﻿@using P326FirstWeppApp.ViewModels;
+@model HomeVm;
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+<p>name===>>>@ViewData["Name"]</p>
+<p>surname===>>@ViewBag.Surname</p>
+<p>age==>>@TempData["Age"]</p>
+
+<ul>
+    @foreach (var item in ViewBag.Surname)
+    {
+        <li>
+            @item.Name  
+        </li>
+    }
+</ul>
+
+<p>@ViewBag.Surname</p>
+<p>@TempData["Age"] </p>
+@*<div class="container">
+
+    <div class="row">
+        <ul class="list-group">
+     @foreach (var item in Model.Students)
+            {
+                <li class="list-group-item">@item.Name,@item.Surname</li>
+           
+
+            }    
+           </ul>
+           </div>
+           </div>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <ul class="list-group">
+            @foreach (var item in Model.Groups)
+            {
+                <li class="list-group-item">@item.Name</li>
+              
+
+            }
+        </ul>
+    </div>
+</div>
+
+*@
